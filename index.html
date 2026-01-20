@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Towing Services - St. Louis, MO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .emergency-banner {
+            background: #c0392b;
+            color: white;
+            padding: 1.5rem 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        
+        .emergency-btn {
+            background: #e74c3c;
+            color: white;
+            border: 3px solid white;
+            padding: 1rem 3rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            animation: pulse 2s infinite;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .emergency-btn:hover {
+            background: #fff;
+            color: #e74c3c;
+            transform: scale(1.05);
+        }
+        
+        .emergency-btn:active {
+            transform: scale(0.95);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+        
+        header {
+            background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .night-mode-toggle {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            backdrop-filter: blur(5px);
+            white-space: nowrap;
+        }
+        
+        .night-mode-toggle:hover {
+            background: white;
+            color: #f39c12;
+        }
+        
+        body.night-mode {
+            background: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        body.night-mode header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        }
+        
+        body.night-mode .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        }
+        
+        body.night-mode .services {
+            background: #2a2a2a;
+        }
+        
+        body.night-mode .service-card {
+            background: #333;
+            color: #e0e0e0;
+        }
+        
+        body.night-mode footer {
+            background: #1a1a1a;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+        }
+        
+        header .container {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        
+        .header-content {
+            flex: 1;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .weather-alert {
+            background: rgba(0,0,0,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .eta-tracker {
+            background: rgba(255,255,255,0.2);
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            display: inline-block;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+            font-size: 1rem;
+        }
+        
+        .eta-tracker h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .eta-time {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .truck-icon {
+            display: inline-block;
+            animation: drive 3s ease-in-out infinite;
+        }
+        
+        @keyframes drive {
+            0%, 100% { transform: translateX(-10px); }
+            50% { transform: translateX(10px); }
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero .highlight {
+            background: rgba(255,255,255,0.2);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+        
+        .services {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .trust-badges {
+            padding: 3rem 0;
+            background: white;
+        }
+        
+        .badges-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            min-width: 200px;
+        }
+        
+        .badge-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2ecc71;
+            margin-bottom: 0.3rem;
+        }
+        
+        .badge-text {
+            font-size: 1rem;
+            color: #555;
+            font-weight: 600;
+        }
+        
+        .timeline-section {
+            padding: 3rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .payment-section {
+            padding: 3rem 0;
+            background: white;
+        }
+        
+        .payment-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #2ecc71;
+        }
+        
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .payment-item {
+            text-align: center;
+        }
+        
+        .payment-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .payment-label {
+            font-size: 1.1rem;
+            color: #555;
+            font-weight: 600;
+        }
+        
+        .timeline-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .timeline-number {
+            background: white;
+            color: #667eea;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .timeline-content {
+            background: rgba(255,255,255,0.15);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            margin-left: 1.5rem;
+            flex-grow: 1;
+            backdrop-filter: blur(10px);
+        }
+        
+        .timeline-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .timeline-content p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        .timeline-time {
+            color: #feca57;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        
+        .gallery {
+            padding: 4rem 0;
+            background: white;
+        }
+        
+        .faq-section {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .testimonials-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .testimonials-section h2 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            font-weight: bold;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background: rgba(255,255,255,0.25);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            transition: transform 0.3s;
+            color: #1a1a1a;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        
+        .testimonial-stars {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+        
+        .testimonial-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: #2c2c2c;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            font-size: 1rem;
+            color: #1a1a1a;
+        }
+        
+        .faq-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #e74c3c;
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+        
+        .faq-answer {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .gallery h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #e74c3c;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            background: #ddd;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .services h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #e74c3c;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .junk-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+            color: white;
+        }
+        
+        .junk-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .junk-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .junk-content p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .junk-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .junk-feature {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .junk-feature h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-top: 5px solid;
+        }
+        
+        .service-card:nth-child(1) { border-top-color: #e74c3c; }
+        .service-card:nth-child(2) { border-top-color: #f39c12; }
+        .service-card:nth-child(3) { border-top-color: #3498db; }
+        .service-card:nth-child(4) { border-top-color: #2ecc71; }
+        .service-card:nth-child(5) { border-top-color: #9b59b6; }
+        .service-card:nth-child(6) { border-top-color: #1abc9c; }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .service-card p {
+            color: #666;
+        }
+        
+        .contact {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, #ff6348 0%, #ff9500 100%);
+            color: white;
+        }
+        
+        .reviews {
+            padding: 4rem 0;
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+        }
+        
+        .reviews h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .reviews p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .qr-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            display: inline-block;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .qr-container img {
+            width: 250px;
+            height: 250px;
+            display: block;
+        }
+        
+        .qr-container p {
+            color: #333;
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+        
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .contact-item {
+            background: rgba(255,255,255,0.15);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-item p {
+            font-size: 1.1rem;
+        }
+        
+        .phone-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #ff6348;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        .cta-button:active {
+            transform: scale(0.95);
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+            
+            .services h2, .contact h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="emergency-banner">
+        <a href="tel:3148184113" class="emergency-btn">🚨 STRANDED? CALL NOW FOR HELP! 🚨</a>
+    </div>
+    
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>🚗 Near You Towing</h1>
+                <p>Fast, Reliable Roadside Assistance - Serving St. Louis, MO</p>
+            </div>
+            <button class="night-mode-toggle" onclick="toggleNightMode()">🌙 Night Mode</button>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="weather-alert">⚠️ We're ready for any weather condition - 24/7 service!</div>
+            <h2>24/7 Emergency Towing & Roadside Assistance</h2>
+            <p>Stranded? We're on our way - day or night!</p>
+            <div class="highlight">⏰ OPEN 24 HOURS</div>
+            <br>
+            <a href="tel:3148184113" class="cta-button">📞 Call Now: (314) 818-4113</a>
+            <div class="eta-tracker">
+                <h3>⏱️ Average Response Time</h3>
+                <p class="eta-time"><span class="truck-icon">🚛</span> 15-30 Minutes</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="trust-badges">
+        <div class="container">
+            <div class="badges-container">
+                <div class="badge">
+                    <div class="badge-icon">🛡️</div>
+                    <div class="badge-number">7,000+</div>
+                    <div class="badge-text">Successful Tows</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">✅</div>
+                    <div class="badge-number">Zero</div>
+                    <div class="badge-text">Damage Guarantee</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">⭐</div>
+                    <div class="badge-number">100%</div>
+                    <div class="badge-text">Customer Satisfaction</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">🏆</div>
+                    <div class="badge-number">5 Years</div>
+                    <div class="badge-text">In Business</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>🚛 Emergency Towing</h3>
+                    <p>Fast response for accidents, breakdowns, and vehicle recovery. We handle cars, trucks, and motorcycles.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔋 Jump Starts</h3>
+                    <p>Dead battery? We'll get you started and back on the road quickly with professional jump-start service.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🔑 Lockout Service</h3>
+                    <p>Locked out of your vehicle? Our experts will safely unlock your car without damage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>⛽ Fuel Delivery</h3>
+                    <p>Ran out of gas? We'll bring fuel directly to you so you can get back on your journey.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🛞 Flat Tire Change</h3>
+                    <p>Flat tire? We'll change it on the spot or tow you to a repair shop - your choice!</p>
+                </div>
+                <div class="service-card">
+                    <h3>🚙 Winch-Out Service</h3>
+                    <p>Stuck in mud, snow, or a ditch? Our winch service will safely extract your vehicle.</p>
+                </div>
+                <div class="service-card">
+                    <h3>💵 Junk Car Removal</h3>
+                    <p>We buy junk cars! Any condition - cars, trucks, motorcycles accepted.</p>
+                </div>
+                <div class="service-card">
+                    <h3>🏭 Towing Yard</h3>
+                    <p>Secure towing yard available. Call us for vehicle storage and retrieval information.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="timeline-section">
+        <div class="container">
+            <h2>📋 What Happens Next?</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Call Answered Instantly</h3>
+                        <p>We pick up your call and get your location details</p>
+                        <p class="timeline-time">⏱️ Less than 1 minute</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Tow Truck Dispatched</h3>
+                        <p>Our nearest truck is immediately sent to your location</p>
+                        <p class="timeline-time">⏱️ 3 minutes</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Driver Arrives On Scene</h3>
+                        <p>Professional driver reaches you and assesses the situation</p>
+                        <p class="timeline-time">⏱️ 10-20 minutes</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>Vehicle Secured & Moving</h3>
+                        <p>Your vehicle is safely loaded and on its way to destination</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="payment-section">
+        <div class="container">
+            <h2>💳 Payment Methods We Accept</h2>
+            <div class="payment-methods">
+                <div class="payment-item">
+                    <div class="payment-icon">💵</div>
+                    <div class="payment-label">Cash</div>
+                </div>
+                <div class="payment-item">
+                    <div class="payment-icon">💳</div>
+                    <div class="payment-label">Credit/Debit Cards</div>
+                </div>
+                <div class="payment-item">
+                    <div class="payment-icon">📱</div>
+                    <div class="payment-label">Venmo</div>
+                </div>
+                <div class="payment-item">
+                    <div class="payment-icon">📱</div>
+                    <div class="payment-label">Cash App</div>
+                </div>
+                <div class="payment-item">
+                    <div class="payment-icon">📱</div>
+                    <div class="payment-label">Zelle</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="junk-section">
+        <div class="container">
+            <h2>💰 We Buy Junk Cars & Have a Yard!</h2>
+            <div class="junk-content">
+                <p>Got an old, broken, or unwanted vehicle? We'll take it off your hands! We accept all types of vehicles in any condition.</p>
+                <div class="junk-features">
+                    <div class="junk-feature">
+                        <h3>🚗 Any Condition</h3>
+                        <p>Running or not - we take them all!</p>
+                    </div>
+                    <div class="junk-feature">
+                        <h3>🚚 All Vehicles</h3>
+                        <p>Cars, trucks, motorcycles accepted</p>
+                    </div>
+                    <div class="junk-feature">
+                        <h3>🏭 Secure Yard</h3>
+                        <p>Professional storage facility available</p>
+                    </div>
+                </div>
+                <p style="margin-top: 2rem; font-size: 1.3rem; font-weight: bold;">Call us today for more information!</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact">
+        <div class="container">
+            <h2>Contact Us Today</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📍 Address</h3>
+                    <p>4105 Potomac St<br>St. Louis, MO 63116</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📞 Phone</h3>
+                    <p class="phone-number">(314) 818-4113</p>
+                </div>
+                <div class="contact-item">
+                    <h3>🌍 Service Area</h3>
+                    <p>St. Louis and MO</p>
+                </div>
+                <div class="contact-item">
+                    <h3>⏰ Hours</h3>
+                    <p style="font-size: 1.5rem; font-weight: bold;">Open 24 Hours</p>
+                    <p>7 Days a Week</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="reviews">
+        <div class="container">
+            <h2>⭐ Leave Us a Review!</h2>
+            <p>Scan the QR code to read reviews or leave your own</p>
+            <p style="font-size: 1.4rem; font-weight: bold; color: #feca57; margin-bottom: 1.5rem;">💰 Use code NEARME10 for $10 off your first tow!</p>
+            <div class="qr-container">
+                <img src="https://via.placeholder.com/250x250/667eea/ffffff?text=Google+Reviews+QR+Code" alt="Scan to review Near You Towing">
+                <p>Scan with your phone camera</p>
+            </div>
+            <p style="margin-top: 2rem; font-size: 1.1rem;">
+                Or click here: <a href="https://g.page/r/YOUR_GOOGLE_PLACE_ID/review" style="color: #feca57; text-decoration: underline; font-weight: bold;">Leave a Review</a>
+            </p>
+        </div>
+    </section>
+    
+    <section class="gallery-links">
+        <div class="container">
+            <h2>📸 View Our Work</h2>
+            <div class="gallery-grid-links">
+                <div class="gallery-link-card">
+                    <a href="YOUR_GOOGLE_PHOTOS_PREVIOUS_CUSTOMERS_LINK" target="_blank">
+                        <div class="gallery-icon">📷</div>
+                        <div class="gallery-title">Previous Customers</div>
+                        <div class="gallery-subtitle">Click to view photos</div>
+                    </a>
+                </div>
+                <div class="gallery-link-card">
+                    <a href="YOUR_GOOGLE_PHOTOS_FLAT_TIRE_LINK" target="_blank">
+                        <div class="gallery-icon">🛞</div>
+                        <div class="gallery-title">Flat Tire Services</div>
+                        <div class="gallery-subtitle">Click to view photos</div>
+                    </a>
+                </div>
+                <div class="gallery-link-card">
+                    <a href="YOUR_GOOGLE_PHOTOS_LOCKOUT_LINK" target="_blank">
+                        <div class="gallery-icon">🔑</div>
+                        <div class="gallery-title">Lockout Services</div>
+                        <div class="gallery-subtitle">Click to view photos</div>
+                    </a>
+                </div>
+                <div class="gallery-link-card">
+                    <a href="YOUR_GOOGLE_PHOTOS_JUMPSTART_LINK" target="_blank">
+                        <div class="gallery-icon">🔋</div>
+                        <div class="gallery-title">Jump Start Services</div>
+                        <div class="gallery-subtitle">Click to view photos</div>
+                    </a>
+                </div>
+                <div class="gallery-link-card">
+                    <a href="YOUR_GOOGLE_PHOTOS_PICKUP_LINK" target="_blank">
+                        <div class="gallery-icon">🚙</div>
+                        <div class="gallery-title">Pickup Trucks</div>
+                        <div class="gallery-subtitle">Click to view photos</div>
+                    </a>
+                </div>
+                <div class="gallery-link-card">
+                    <a href="YOUR_GOOGLE_PHOTOS_EV_LINK" target="_blank">
+                        <div class="gallery-icon">⚡</div>
+                        <div class="gallery-title">Electric Vehicles</div>
+                        <div class="gallery-subtitle">Click to view photos</div>
+                    </a>
+                </div>
+                <div class="gallery-link-card">
+                    <a href="YOUR_GOOGLE_PHOTOS_EQUIPMENT_LINK" target="_blank">
+                        <div class="gallery-icon">🚜</div>
+                        <div class="gallery-title">Heavy Equipment</div>
+                        <div class="gallery-subtitle">Click to view photos</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>⭐ What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Fast service! They arrived in 15 minutes and got my car to the shop safely. Highly recommend!"</div>
+                    <div class="testimonial-author">- Sam W.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Called them at 2am with a flat tire. Professional driver showed up quickly and helped me out. Great 24/7 service!"</div>
+                    <div class="testimonial-author">- Maria G.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Best towing company in St. Louis! They bought my old junk car for a fair price and towed it away same day."</div>
+                    <div class="testimonial-author">- Robert T.</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">"Stuck in a ditch during the snowstorm. They came out quickly and pulled me out safely. Super professional crew!"</div>
+                    <div class="testimonial-author">- Jennifer L.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="faq-section">
+        <div class="container">
+            <h2>❓ Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">Q: What types of vehicles do you tow?</div>
+                    <div class="faq-answer">A: We tow all types of vehicles including cars, trucks, motorcycles, SUVs, and vans. Whether your vehicle is running or not, we can handle it!</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: How long does it take for you to arrive?</div>
+                    <div class="faq-answer">A: Our average response time is 10-20 minutes depending on your location and traffic conditions. We prioritize emergency calls and work 24/7 to get to you fast.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: Do you accept insurance?</div>
+                    <div class="faq-answer">A: Yes! We work with most major insurance companies. We can provide you with all necessary documentation for your insurance claim.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: What payment methods do you accept?</div>
+                    <div class="faq-answer">A: We accept cash, all major credit cards, debit cards, and digital payment methods for your convenience.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: Do you buy junk cars?</div>
+                    <div class="faq-answer">A: Yes! We purchase junk cars in any condition - running or not. We accept cars, trucks, and motorcycles. Call us for a quote!</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Q: Are you available 24/7?</div>
+                    <div class="faq-answer">A: Absolutely! We provide 24/7 emergency towing and roadside assistance, 365 days a year. No matter when you need us, we're here to help.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Near You Towing. Fast & Reliable Towing in St. Louis, MO</p>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleNightMode() {
+            document.body.classList.toggle('night-mode');
+            const btn = document.querySelector('.night-mode-toggle');
+            if (document.body.classList.contains('night-mode')) {
+                btn.textContent = '☀️ Light Mode';
+            } else {
+                btn.textContent = '🌙 Night Mode';
+            }
+        }
+    </script>
+</body>
+</html>
