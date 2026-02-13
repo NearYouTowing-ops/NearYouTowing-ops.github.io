@@ -3,697 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expert Towing Services - St. Louis, MO</title>
+    <title>Near You Towing - 24/7 Towing Services</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .emergency-banner {
-            background: #c0392b;
-            color: white;
-            padding: 1.5rem 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-        
-        .emergency-btn {
-            background: #e74c3c;
-            color: white;
-            border: 3px solid white;
-            padding: 1rem 3rem;
-            font-size: 1.5rem;
-            font-weight: bold;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-block;
-            animation: pulse 2s infinite;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .emergency-btn:hover {
-            background: #fff;
-            color: #e74c3c;
-            transform: scale(1.05);
-        }
-        
-        .emergency-btn:active {
-            transform: scale(0.95);
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
-        }
-        
-        header {
-            background: linear-gradient(135deg, #f39c12 0%, #e74c3c 100%);
-            color: white;
-            padding: 2rem 0;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            position: relative;
-        }
-        
-        .night-mode-toggle {
-            background: rgba(255,255,255,0.2);
-            border: 2px solid white;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-            backdrop-filter: blur(5px);
-            white-space: nowrap;
-        }
-        
-        .night-mode-toggle:hover {
-            background: white;
-            color: #f39c12;
-        }
-        
-        body.night-mode {
-            background: #1a1a1a;
-            color: #e0e0e0;
-        }
-        
-        body.night-mode header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-        }
-        
-        body.night-mode .hero {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-        }
-        
-        body.night-mode .services {
-            background: #2a2a2a;
-        }
-        
-        body.night-mode .service-card {
-            background: #333;
-            color: #e0e0e0;
-        }
-        
-        body.night-mode footer {
-            background: #1a1a1a;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            position: relative;
-        }
-        
-        header .container {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-        
-        .header-content {
-            flex: 1;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.95;
-        }
-        
-        .hero {
-            background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        
-        .weather-alert {
-            background: rgba(0,0,0,0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 10px;
-            display: inline-block;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            backdrop-filter: blur(5px);
-        }
-        
-        .eta-tracker {
-            background: rgba(255,255,255,0.2);
-            padding: 1rem 2rem;
-            border-radius: 15px;
-            display: inline-block;
-            margin-top: 2rem;
-            backdrop-filter: blur(10px);
-            font-size: 1rem;
-        }
-        
-        .eta-tracker h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .eta-time {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #fff;
-        }
-        
-        .truck-icon {
-            display: inline-block;
-            animation: drive 3s ease-in-out infinite;
-        }
-        
-        @keyframes drive {
-            0%, 100% { transform: translateX(-10px); }
-            50% { transform: translateX(10px); }
-        }
-        
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .hero .highlight {
-            background: rgba(255,255,255,0.2);
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 1rem;
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-        
-        .services {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-        
-        .trust-badges {
-            padding: 3rem 0;
-            background: white;
-        }
-        
-        .badges-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .badge {
-            text-align: center;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            min-width: 200px;
-        }
-        
-        .badge-icon {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .badge-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #2ecc71;
-            margin-bottom: 0.3rem;
-        }
-        
-        .badge-text {
-            font-size: 1rem;
-            color: #555;
-            font-weight: 600;
-        }
-        
-        .timeline-section {
-            padding: 3rem 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-        
-        .payment-section {
-            padding: 3rem 0;
-            background: white;
-        }
-        
-        .payment-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: #2ecc71;
-        }
-        
-        .payment-methods {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-        }
-        
-        .payment-item {
-            text-align: center;
-        }
-        
-        .payment-icon {
-            font-size: 3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .payment-label {
-            font-size: 1.1rem;
-            color: #555;
-            font-weight: 600;
-        }
-        
-        .timeline-section h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .timeline {
-            max-width: 700px;
-            margin: 0 auto;
-            position: relative;
-        }
-        
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            position: relative;
-        }
-        
-        .timeline-number {
-            background: white;
-            color: #667eea;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            font-weight: bold;
-            flex-shrink: 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .timeline-content {
-            background: rgba(255,255,255,0.15);
-            padding: 1rem 1.5rem;
-            border-radius: 15px;
-            margin-left: 1.5rem;
-            flex-grow: 1;
-            backdrop-filter: blur(10px);
-        }
-        
-        .timeline-content h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-        
-        .timeline-content p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-        
-        .timeline-time {
-            color: #feca57;
-            font-weight: bold;
-            font-size: 1rem;
-        }
-        
-        .gallery {
-            padding: 4rem 0;
-            background: white;
-        }
-        
-        .faq-section {
-            padding: 4rem 0;
-            background: #f8f9fa;
-        }
-        
-        .testimonials-section {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
-            color: white;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-        
-        .testimonials-section h2 {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            font-weight: bold;
-        }
-        
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .testimonial-card {
-            background: rgba(255,255,255,0.25);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.3);
-            transition: transform 0.3s;
-            color: #1a1a1a;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        
-        .testimonial-stars {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-        
-        .testimonial-text {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-            font-style: italic;
-            color: #2c2c2c;
-        }
-        
-        .testimonial-author {
-            font-weight: bold;
-            font-size: 1rem;
-            color: #1a1a1a;
-        }
-        
-        .faq-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #e74c3c;
-        }
-        
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background: white;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        
-        .faq-question {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
-        
-        .faq-answer {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        .gallery h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #e74c3c;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .gallery-item {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s;
-            background: #ddd;
-            height: 250px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 1.2rem;
-            text-align: center;
-            padding: 1rem;
-        }
-        
-        .gallery-item:hover {
-            transform: scale(1.05);
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .services h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #e74c3c;
-        }
-        
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        
-        .junk-section {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
-            color: white;
-        }
-        
-        .junk-section h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .junk-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .junk-content p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-        }
-        
-        .junk-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .junk-feature {
-            background: rgba(255,255,255,0.15);
-            padding: 1.5rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .junk-feature h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-            border-top: 5px solid;
-        }
-        
-        .service-card:nth-child(1) { border-top-color: #e74c3c; }
-        .service-card:nth-child(2) { border-top-color: #f39c12; }
-        .service-card:nth-child(3) { border-top-color: #3498db; }
-        .service-card:nth-child(4) { border-top-color: #2ecc71; }
-        .service-card:nth-child(5) { border-top-color: #9b59b6; }
-        .service-card:nth-child(6) { border-top-color: #1abc9c; }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-        
-        .service-card p {
-            color: #666;
-        }
-        
-        .contact {
-            padding: 4rem 0;
-            background: linear-gradient(135deg, #ff6348 0%, #ff9500 100%);
-            color: white;
-        }
-        
-        .reviews {
-            padding: 4rem 0;
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-        }
-        
-        .reviews h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .reviews p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .qr-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 20px;
-            display: inline-block;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        
-        .qr-container img {
-            width: 250px;
-            height: 250px;
-            display: block;
-        }
-        
-        .qr-container p {
-            color: #333;
-            margin-top: 1rem;
-            font-size: 1rem;
-        }
-        
-        .contact h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-        }
-        
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-        
-        .contact-item {
-            background: rgba(255,255,255,0.15);
-            padding: 2rem;
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-        }
-        
-        .contact-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact-item p {
-            font-size: 1.1rem;
-        }
-        
-        .phone-number {
-            font-size: 1.8rem;
-            font-weight: bold;
-            margin-top: 0.5rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #ff6348;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-top: 2rem;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-        
-        .cta-button:hover {
-            transform: scale(1.05);
-        }
-        
-        .cta-button:active {
-            transform: scale(0.95);
-        }
-        
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-        }
-        
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-            
-            .services h2, .contact h2 {
-                font-size: 2rem;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        .emergency-banner { background: #c0392b; color: white; padding: 1.5rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
+        .emergency-btn { background: #e74c3c; color: white; border: 3px solid white; padding: 1rem 3rem; font-size: 1.5rem; font-weight: bold; border-radius: 50px; text-decoration: none; display: inline-block; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+        
+        header { background: linear-gradient(135deg, #f39c12, #e74c3c); color: white; padding: 2rem 0; }
+        header .container { display: flex; align-items: center; gap: 2rem; }
+        .header-content { flex: 1; text-align: center; }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .night-mode-toggle { background: rgba(255,255,255,0.2); border: 2px solid white; color: white; padding: 0.5rem 1rem; border-radius: 25px; cursor: pointer; }
+        
+        .hero { background: linear-gradient(135deg, #ff6b6b, #feca57); color: white; padding: 4rem 0; text-align: center; }
+        .hero h2 { font-size: 2.5rem; margin: 1rem 0; }
+        .highlight { background: rgba(255,255,255,0.2); padding: 1rem 2rem; border-radius: 10px; display: inline-block; font-size: 1.3rem; font-weight: bold; }
+        .cta-button { background: white; color: #ff6348; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-block; margin-top: 1rem; }
+        .eta-tracker { background: rgba(255,255,255,0.2); padding: 1rem 2rem; border-radius: 15px; display: inline-block; margin-top: 2rem; }
+        
+        .trust-badges { padding: 3rem 0; background: white; }
+        .badges-container { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+        .badge { text-align: center; padding: 1.5rem; background: linear-gradient(135deg, #f5f7fa, #c3cfe2); border-radius: 15px; min-width: 200px; }
+        .badge-icon { font-size: 3rem; }
+        .badge-number { font-size: 2rem; font-weight: bold; color: #2ecc71; }
+        
+        .services { padding: 4rem 0; background: #f8f9fa; }
+        .services h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #e74c3c; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .service-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s; }
+        .service-card:hover { transform: translateY(-5px); }
+        .service-card h3 { font-size: 1.5rem; margin-bottom: 1rem; }
+        
+        .timeline-section { padding: 3rem 0; background: linear-gradient(135deg, #667eea, #764ba2); color: white; }
+        .timeline-section h2 { text-align: center; font-size: 2rem; margin-bottom: 2rem; }
+        .timeline { max-width: 700px; margin: 0 auto; }
+        .timeline-item { display: flex; align-items: center; margin-bottom: 1.5rem; }
+        .timeline-number { background: white; color: #667eea; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: bold; }
+        .timeline-content { background: rgba(255,255,255,0.15); padding: 1rem 1.5rem; border-radius: 15px; margin-left: 1.5rem; flex-grow: 1; }
+        .timeline-time { color: #feca57; font-weight: bold; }
+        
+        .payment-section { padding: 3rem 0; background: white; }
+        .payment-section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 2rem; color: #2ecc71; }
+        .payment-methods { display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+        .payment-item { text-align: center; }
+        .payment-icon { font-size: 3rem; }
+        
+        .junk-section { padding: 4rem 0; background: linear-gradient(135deg, #2ecc71, #27ae60); color: white; }
+        .junk-section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 2rem; }
+        .junk-content { max-width: 800px; margin: 0 auto; text-align: center; }
+        .junk-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+        .junk-feature { background: rgba(255,255,255,0.15); padding: 1.5rem; border-radius: 15px; }
+        
+        .contact { padding: 4rem 0; background: linear-gradient(135deg, #ff6348, #ff9500); color: white; }
+        .contact h2 { text-align: center; font-size: 2.5rem; margin-bottom: 2rem; }
+        .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; text-align: center; }
+        .contact-item { background: rgba(255,255,255,0.15); padding: 2rem; border-radius: 15px; }
+        .phone-number { font-size: 1.8rem; font-weight: bold; }
+        
+        .reviews { padding: 4rem 0; background: #2c3e50; color: white; text-align: center; }
+        .reviews h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .qr-container { background: white; padding: 2rem; border-radius: 20px; display: inline-block; margin-top: 1rem; }
+        .qr-container img { width: 250px; height: 250px; }
+        
+        .gallery-links { padding: 5rem 0; background: linear-gradient(135deg, #e74c3c, #f39c12); color: white; }
+        .gallery-links h2 { text-align: center; font-size: 3.5rem; margin-bottom: 3rem; font-weight: bold; text-transform: uppercase; }
+        .gallery-grid-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; max-width: 1100px; margin: 0 auto; }
+        .gallery-link-card { background: rgba(255,255,255,0.95); padding: 3rem 2rem; border-radius: 20px; text-align: center; border: 4px solid rgba(255,255,255,0.5); cursor: pointer; transition: all 0.3s; }
+        .gallery-link-card:hover { transform: translateY(-10px) scale(1.05); }
+        .gallery-link-card a { text-decoration: none; color: inherit; display: block; }
+        .gallery-icon { font-size: 5rem; margin-bottom: 1.5rem; }
+        .gallery-title { font-size: 2rem; font-weight: bold; color: #e74c3c; margin-bottom: 0.8rem; text-transform: uppercase; }
+        
+        .testimonials-section { padding: 4rem 0; background: linear-gradient(135deg, #feca57, #ff9ff3); color: white; }
+        .testimonials-section h2 { text-align: center; font-size: 2.8rem; margin-bottom: 2.5rem; font-weight: bold; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto; }
+        .testimonial-card { background: rgba(255,255,255,0.25); padding: 2rem; border-radius: 15px; border: 2px solid rgba(255,255,255,0.3); }
+        .testimonial-stars { font-size: 1.5rem; margin-bottom: 1rem; }
+        .testimonial-text { font-size: 1.1rem; margin-bottom: 1rem; font-style: italic; color: #2c2c2c; }
+        .testimonial-author { font-weight: bold; color: #1a1a1a; }
+        
+        .faq-section { padding: 4rem 0; background: #f8f9fa; }
+        .faq-section h2 { text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #e74c3c; }
+        .faq-container { max-width: 900px; margin: 0 auto; }
+        .faq-item { background: white; padding: 1.5rem; margin-bottom: 1rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .faq-question { font-size: 1.2rem; font-weight: bold; margin-bottom: 0.5rem; }
+        .faq-answer { color: #666; }
+        
+        footer { background: #333; color: white; text-align: center; padding: 2rem 0; }
     </style>
 </head>
 <body>
@@ -713,7 +113,7 @@
     
     <section class="hero">
         <div class="container">
-            <div class="weather-alert">⚠️ We're ready for any weather condition - 24/7 service!</div>
+            <div style="background: rgba(0,0,0,0.2); padding: 0.5rem 1rem; border-radius: 10px; display: inline-block; margin-bottom: 1rem;">⚠️ We're ready for any weather condition - 24/7 service!</div>
             <h2>24/7 Emergency Towing & Roadside Assistance</h2>
             <p>Stranded? We're on our way - day or night!</p>
             <div class="highlight">⏰ OPEN 24 HOURS</div>
@@ -721,7 +121,7 @@
             <a href="tel:3148184113" class="cta-button">📞 Call Now: (314) 818-4113</a>
             <div class="eta-tracker">
                 <h3>⏱️ Average Response Time</h3>
-                <p class="eta-time"><span class="truck-icon">🚛</span> 15-30 Minutes</p>
+                <p style="font-size: 1.8rem; font-weight: bold;">🚛 10-20 Minutes</p>
             </div>
         </div>
     </section>
@@ -842,7 +242,7 @@
                 </div>
                 <div class="payment-item">
                     <div class="payment-icon">💳</div>
-                    <div class="payment-label">Credit/Debit Cards</div>
+                    <div class="payment-label">Credit/Debit</div>
                 </div>
                 <div class="payment-item">
                     <div class="payment-icon">📱</div>
@@ -868,15 +268,15 @@
                 <div class="junk-features">
                     <div class="junk-feature">
                         <h3>🚗 Any Condition</h3>
-                        <p>Running or not - we take them all!</p>
+                        <p>Running or not!</p>
                     </div>
                     <div class="junk-feature">
                         <h3>🚚 All Vehicles</h3>
-                        <p>Cars, trucks, motorcycles accepted</p>
+                        <p>Cars, trucks, motorcycles</p>
                     </div>
                     <div class="junk-feature">
                         <h3>🏭 Secure Yard</h3>
-                        <p>Professional storage facility available</p>
+                        <p>Professional storage</p>
                     </div>
                 </div>
                 <p style="margin-top: 2rem; font-size: 1.3rem; font-weight: bold;">Call us today for more information!</p>
@@ -915,8 +315,8 @@
             <p>Scan the QR code to read reviews or leave your own</p>
             <p style="font-size: 1.4rem; font-weight: bold; color: #feca57; margin-bottom: 1.5rem;">💰 Use code NEARME10 for $10 off your first tow!</p>
             <div class="qr-container">
-                <img src="https://via.placeholder.com/250x250/667eea/ffffff?text=Google+Reviews+QR+Code" alt="Scan to review Near You Towing">
-                <p>Scan with your phone camera</p>
+                <img src="https://via.placeholder.com/250x250/667eea/ffffff?text=Google+Reviews+QR+Code" alt="Scan to review">
+                <p style="color: #333; margin-top: 1rem;">Scan with your phone camera</p>
             </div>
             <p style="margin-top: 2rem; font-size: 1.1rem;">
                 Or click here: <a href="https://g.page/r/YOUR_GOOGLE_PLACE_ID/review" style="color: #feca57; text-decoration: underline; font-weight: bold;">Leave a Review</a>
@@ -926,7 +326,7 @@
     
     <section class="gallery-links">
         <div class="container">
-            <h2>📸 View Our Work</h2>
+            <h2>📸 VIEW OUR WORK</h2>
             <div class="gallery-grid-links">
                 <div class="gallery-link-card">
                     <a href="YOUR_GOOGLE_PHOTOS_PREVIOUS_CUSTOMERS_LINK" target="_blank">
